@@ -32,7 +32,7 @@ const frameworks = [
   },
   {
     value: 'hin',
-    label: 'India'
+    label: 'Hindi'
   }
 ];
 export default function Home() {
