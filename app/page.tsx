@@ -16,7 +16,7 @@ import {
 import { useCallback, useEffect, useState } from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { createWorker } from 'tesseract.js';
+import { Line, createWorker } from 'tesseract.js';
 
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
@@ -40,7 +40,8 @@ export default function Home() {
   const [value, setValue] = useState('eng');
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [textResult, setTextResult] = useState([]);
+const [textResult, setTextResult] = useState<Line[]>([]);
+
   const [isLoading, setIsLoading] = useState(false);
   const worker = createWorker();
 
